@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>showuser.html</title>
+		<meta charset=utf-8>
+		<meta name=description content="">
+		<meta name=viewport content="width=device-width, initial-scale=1">
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script src="js/homepage.js"></script>
+		<style type='text/css'>
+			body {
+			background-color: #EEE;
+			}
+			#centertext{
+				background-color: #FFF;
+			}
+		</style>
+	</head>
+	
+	<body>
+		
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">微信接口测试demo</a>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="index.html" >主页</a></li>
+						<li><a href="ShowUserServlet" target="mainframe" >通讯录</a></li>
+					</ul>
+					</div><!-- /.navbar-collapse -->
+					</div><!-- /.container-fluid -->
+				</nav>
+				
+				<div class="container-fluid" >
+					<div class="row-fluid">
+						<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+						</div>
+						<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" id="centertext">
+						<iframe src="http://www.baidu.com" height="600" width="100%" name="mainframe" frameborder="0"></iframe>
+								
+						</div>
+						<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+						</div>
+					</div>
+				</div>
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+					aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog" >
+						<div class="modal-content" >
+							<div class="modal-header">
+								<button type="button" class="close"
+								data-dismiss="modal" aria-hidden="true">
+								&times;
+								</button>
+								<h4 class="modal-title" id="myModalLabel">
+								新增成员
+								</h4>
+							</div>
+							<div class="modal-body" style="text-align:center">
+								
+								<form class="form-horizontal" id="addUserForm" action="https://qyapi.weixin.qq.com/cgi-bin/user/create?access_token=${accessToken}" method="post">
+									<fieldset>
+										<div class="control-group">
+											<!-- Text input-->
+											
+											<div class="controls">
+											<span><strong>UserId: </strong></span> <input type="text" placeholder="英文或者数字" class="input-xlarge" name="userid">
+												<p class="help-block">不能重复</p>
+											</div>
+										</div>
+										<div class="control-group">
+											<!-- Text input-->
+											
+											<div class="controls" >
+											<span><strong>姓名：</strong></span>
+												<input type="text" placeholder="" class="input-xlarge" name="name">
+												<p class="help-block"></p>
+											</div>
+										</div>
+										<div class="control-group">
+											<!-- Select Basic -->
+											
+											<div class="controls">
+											<span><strong>部门： </strong></span>
+												<select class="input-xlarge" name="department">
+													<option value="1">1.成都明朗科技公司</option>
+													<option value="4">4.开发部</option>
+													</select>
+											</div>
+											</div>
+											<p></p>
+											<div class="control-group">
+												
+												<div class="controls">
+													<span><strong>职位: </strong></span>
+													<input type="text" placeholder="" class="input-xlarge" name="position">
+													<p class="help-block"></p>
+												</div>
+											</div>
+											<div class="control-group">
+												<!-- Text input-->
+												
+												<div class="controls">
+												<span><strong>电话: </strong></span>
+													<input type="text" placeholder="" class="input-xlarge" name="mobile">
+													<p class="help-block"></p>
+												</div>
+											</div>
+											<div class="control-group">
+												<!-- Text input-->
+												
+												<div class="controls">
+												<span><strong>邮箱: </strong></span>
+													<input type="text" placeholder="" class="input-xlarge" name="email">
+													<p class="help-block"></p>
+												</div>
+											</div>
+											<div class="control-group">
+												<!-- Text input-->
+												
+												<div class="controls">
+												<span><strong>微信号: </strong></span>
+													<input type="text" placeholder="" class="input-xlarge" name="weixinid">
+													<p class="help-block"></p>
+												</div>
+											</div>
+										</fieldset>
+									</form>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default"
+									data-dismiss="modal">关闭
+									</button>
+									<button type="button" class="btn btn-primary" id="btnadd">
+									提交更改
+									</button>
+								</div>
+								</div><!-- /.modal-content -->
+								</div><!-- /.modal -->
+							</body>
+						</html>
