@@ -17,7 +17,7 @@ public class MainPageServiceImpl implements MainPageIService{
 
 	@Override
 	public List<Department> getDepartmentList() {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 	@Override

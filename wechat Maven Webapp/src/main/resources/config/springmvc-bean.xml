@@ -6,4 +6,5 @@
 
 <beans>	
 	<bean id="mainPageService" class="com.mlkj.wechat.service.impl.MainPageServiceImpl"></bean>
+	<bean id="callBackService" class="com.mlkj.wechat.service.impl.CallBackServiceImpl"></bean>
 </beans>

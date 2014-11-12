@@ -18,7 +18,7 @@ public class TextOutputMessage extends OutputMessage{
     
 	@Override
 	public String getMsgType() {
-		// TODO Auto-generated method stub
+		// 
 		return MsgType;
 	}
 	

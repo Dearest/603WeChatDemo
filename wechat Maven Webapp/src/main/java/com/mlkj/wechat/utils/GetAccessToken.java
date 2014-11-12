@@ -32,7 +32,7 @@ public class GetAccessToken {
 
 		@Override
 		public void run() {
-			// TODO Auto-generated method stub
+			// 
 			try {
 				Properties properties =  ConfigProperties.getProperties();
 				
@@ -62,13 +62,13 @@ public class GetAccessToken {
 
 				}
 			} catch (MalformedURLException e) {
-				// TODO Auto-generated catch block
+				
 				e.printStackTrace();
 			} catch (FileNotFoundException e) {
-				// TODO Auto-generated catch block
+				
 				e.printStackTrace();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
+			
 				e.printStackTrace();
 			}
 		}
