@@ -8,7 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.mlkj.wechat.Iservice.MainPageIService;
+import com.mlkj.wechat.Iservice.IMainPageService;
 import com.mlkj.wechat.model.User;
 
 /**
@@ -20,7 +20,7 @@ import com.mlkj.wechat.model.User;
 @RequestMapping("/main")
 public class MainPageController {
 	@Resource(name="mainPageService")
-	private MainPageIService mainPageService;
+	private IMainPageService mainPageService;
 	
 	@RequestMapping("/show")
 	public String showDepartmentAndUser(ModelMap modelMap) throws Exception{

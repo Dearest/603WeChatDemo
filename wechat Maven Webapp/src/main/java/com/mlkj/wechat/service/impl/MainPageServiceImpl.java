@@ -7,13 +7,13 @@ import java.util.List;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
-import com.mlkj.wechat.Iservice.MainPageIService;
+import com.mlkj.wechat.Iservice.IMainPageService;
 import com.mlkj.wechat.model.Department;
 import com.mlkj.wechat.model.User;
 import com.mlkj.wechat.utils.ConfigProperties;
 import com.mlkj.wechat.utils.HttpRequest;
 
-public class MainPageServiceImpl implements MainPageIService{
+public class MainPageServiceImpl implements IMainPageService{
 
 	@Override
 	public List<Department> getDepartmentList() {

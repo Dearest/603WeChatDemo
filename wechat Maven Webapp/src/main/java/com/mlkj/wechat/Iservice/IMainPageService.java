@@ -5,7 +5,7 @@ import java.util.List;
 import com.mlkj.wechat.model.Department;
 import com.mlkj.wechat.model.User;
 
-public interface MainPageIService {
+public interface IMainPageService {
 	/**
 	 * 得到部门列表
 	 * @return

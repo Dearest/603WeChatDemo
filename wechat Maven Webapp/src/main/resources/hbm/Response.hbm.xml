@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.mlkj.wechat.model">
+	<class name="Response" table="response">
+		<id name="id" column="id">
+	        <generator class="native"/>
+	    </id>
+	    <property name="content" column="content" not-null="true"/>
+	     <property name="userid" column="userid" not-null="true"/>
+	      <property name="msgId" column="msg_id" not-null="true"/>
+	    <set name="textMessage" cascade="all" table="text_message_has_response" inverse="true" >
+	        <key column="response_id"  not-null="true" />
+	        <many-to-many class="TextMessage" column="text_message_id"/>
+	    </set>
+	  
+	</class>
+</hibernate-mapping>
