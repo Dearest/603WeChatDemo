@@ -3,7 +3,7 @@
 <!ENTITY contextInclude SYSTEM "org/springframework/web/context/WEB-INF/contextInclude.xml">
 ]>
 
-<!-- user beans 定义文件 -->
+
 <beans>	
-	
+	<bean id="mainPageService" class="com.mlkj.wechat.service.impl.MainPageServiceImpl"></bean>
 </beans>
