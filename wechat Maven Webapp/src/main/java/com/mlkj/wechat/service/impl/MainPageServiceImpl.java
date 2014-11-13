@@ -8,13 +8,19 @@ import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
 import com.mlkj.wechat.Iservice.IMainPageService;
+import com.mlkj.wechat.dao.IMainPageDAO;
 import com.mlkj.wechat.model.Department;
+import com.mlkj.wechat.model.TextMessage;
 import com.mlkj.wechat.model.User;
 import com.mlkj.wechat.utils.ConfigProperties;
 import com.mlkj.wechat.utils.HttpRequest;
 
 public class MainPageServiceImpl implements IMainPageService{
-
+	
+	private IMainPageDAO mainPageDAO;
+	public void setMainPageDAO(IMainPageDAO mainPageDAO) {
+		this.mainPageDAO = mainPageDAO;
+	}
 	@Override
 	public List<Department> getDepartmentList() {
 		
@@ -35,7 +41,7 @@ public class MainPageServiceImpl implements IMainPageService{
 		HttpRequest result = HttpRequest.get(url).connectTimeout(5000);
 		if (result.ok()) {
 			JSONObject resultJson = JSONObject.fromObject(result.body());
-			
+			System.out.println(resultJson.toString());
 			if (resultJson.getInt("errcode") == 0) {
 				JSONArray userArray = resultJson.getJSONArray("userlist");
 				// 遍历json数组 将每个成员放到list里
@@ -50,6 +56,13 @@ public class MainPageServiceImpl implements IMainPageService{
 			}
 		}
 		return users;
+	}
+	
+	
+	@Override
+	public List<TextMessage> getTextMessages() throws Exception {
+		
+		return mainPageDAO.getTextMessages();
 	}
 
 }

@@ -1,5 +1,6 @@
 package com.mlkj.wechat.model;
 
+import java.util.Date;
 import java.util.Set;
 
 public class TextMessage {
@@ -10,7 +11,7 @@ public class TextMessage {
     /**
      * 微信发送的long型时间单位是秒（s）,Date(Long date)参数单位是毫秒（ms）
      */
-    private Long createTime;
+    private Date createTime;
     private String msgType = "text";
     // 文本消息
     private String content;
@@ -44,10 +45,10 @@ public class TextMessage {
 	public void setFromUserName(String fromUserName) {
 		this.fromUserName = fromUserName;
 	}
-	public Long getCreateTime() {
+	public Date getCreateTime() {
 		return createTime;
 	}
-	public void setCreateTime(Long createTime) {
+	public void setCreateTime(Date createTime) {
 		this.createTime = createTime;
 	}
 	public String getMsgType() {

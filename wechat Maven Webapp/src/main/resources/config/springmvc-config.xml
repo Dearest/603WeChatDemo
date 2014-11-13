@@ -16,8 +16,6 @@
 	<mvc:resources mapping="/js/**" location="/WEB-INF/templates/js/"/>  
     <mvc:resources mapping="/css/**" location="/WEB-INF/templates/css/"/>  
     <mvc:resources mapping="/img/**" location="/WEB-INF/templates/img/"/>
-    <mvc:resources mapping="/wav/**" location="/WEB-INF/templates/wav/"/>
-    <mvc:resources mapping="/font-awesome-4.1.0/**" location="/WEB-INF/templates/font-awesome-4.1.0/"/>
     <mvc:resources mapping="/fonts/**" location="/WEB-INF/templates/fonts/"/>
     <mvc:resources mapping="/less/**" location="/WEB-INF/templates/less/"/>
     <mvc:resources mapping="/" location="/WEB-INF/templates/index.html"/>
@@ -39,7 +37,7 @@
         <property name="freemarkerSettings">  
             <props>  
                 <prop key="template_update_delay">10</prop>  
-                <prop key="datetime_format">yyyy-MM-dd</prop>  
+                <prop key="datetime_format">yyyy-MM-dd HH:mm:ss</prop>  
                 <prop key="date_format">yyyy-MM-dd</prop>
                 <prop key="auto_import">spring.ftl as s</prop>  
                 <prop key="number_format">#</prop>              

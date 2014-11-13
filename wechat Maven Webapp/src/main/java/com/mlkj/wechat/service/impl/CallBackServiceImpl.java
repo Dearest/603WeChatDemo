@@ -1,5 +1,6 @@
 package com.mlkj.wechat.service.impl;
 
+import java.util.Date;
 import java.util.Properties;
 
 import com.mlkj.wechat.Iservice.ICallBackServise;
@@ -56,7 +57,7 @@ public class CallBackServiceImpl implements ICallBackServise{
         textMsg.setUserid(inputMsg.getFromUserName());
         textMsg.setToUserName(inputMsg.getToUserName());
         textMsg.setFromUserName(inputMsg.getFromUserName());
-        textMsg.setCreateTime(inputMsg.getCreateTime()*1000);
+        textMsg.setCreateTime(new Date(inputMsg.getCreateTime()*1000));
         textMsg.setContent(inputMsg.getContent());
         textMsg.setMsgId(inputMsg.getMsgId());
         //保存信息到数据库

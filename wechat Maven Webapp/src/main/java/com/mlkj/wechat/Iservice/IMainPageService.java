@@ -3,6 +3,7 @@ package com.mlkj.wechat.Iservice;
 import java.util.List;
 
 import com.mlkj.wechat.model.Department;
+import com.mlkj.wechat.model.TextMessage;
 import com.mlkj.wechat.model.User;
 
 public interface IMainPageService {
@@ -17,4 +18,11 @@ public interface IMainPageService {
 	 * @return
 	 */
 	public List<User> getUserList() throws Exception;
+	
+	/**
+	 * 得到消息列表
+	 * @return
+	 * @throws Exception
+	 */
+	public List<TextMessage> getTextMessages() throws Exception;
 }

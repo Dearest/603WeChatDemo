@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>message.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    
+ 	 <link href="${rc.contextPath}/css/bootstrap.css" rel="stylesheet">
+	<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+	<script src="${rc.contextPath}/js/bootstrap.js"></script>
+	<script src="${rc.contextPath}/js/homepage.js"></script>
+
+  </head>
+  
+  <body>
+    <div class="accordion" id="accordion-519026">
+    <#if messages??>
+    <#list messages as m>
+    <#if m??>
+	<div class="accordion-group">
+		<div class="accordion-heading"><a class="accordion-toggle collapsed" contenteditable="true" data-parent="#accordion-519026" data-toggle="collapse" href="#${m.msgId}"><h3>消息：${m.content}  ||来至：${m.userid}</h3></a></div>
+		<div class="accordion-body collapse" id="${m.msgId}" style="height: 0px;">
+			<div class="accordion-inner" contenteditable="true">
+				<div class="well well-lg">
+				<h3>
+				<span>消息来源：${m.userid}</span><br>
+				<span>消息时间：${m.createTime}</span><br>
+				<span>消息内容:${m.content}</span><br>
+				<hr>
+				<p></p>
+				<#if m.isResponse == 0>
+					<span>还没有回复该条消息</span><br>
+				</#if>
+				</div>
+				</h3>
+			</div>
+		</div>
+	</div>
+	<p></p>
+	</#if>
+	</#list>
+	</#if>
+	
+</div>
+  </body>
+</html>

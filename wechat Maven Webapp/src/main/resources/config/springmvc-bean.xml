@@ -6,7 +6,12 @@
 
 <beans>	
 
-	<bean id="mainPageService" class="com.mlkj.wechat.service.impl.MainPageServiceImpl"></bean>
+	<bean id="mainPageService" class="com.mlkj.wechat.service.impl.MainPageServiceImpl">
+		<property name="mainPageDAO" ref="mainPageDAO"></property>
+	</bean>
+	<bean id="mainPageDAO" class="com.mlkj.wechat.dao.impl.MainPageDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
 	
 	<bean id="callBackService" class="com.mlkj.wechat.service.impl.CallBackServiceImpl">
 		<property name="callBackDAO" ref="callBackDAO"></property>
