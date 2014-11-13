@@ -13,9 +13,9 @@
 	<!-- 数据库连接配置 -->
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-		<property name="url" value="jdbc:mysql://localhost:3306/wechat"/>
+		<property name="url" value="jdbc:mysql://210.41.225.141:3306/wechat?useUnicode=true&amp;characterEncoding=UTF-8"/>
 		<property name="username" value="root"/>
-		<property name="password" value="hanchen"/>
+		<property name="password" value="teamwork603"/>
 	</bean>
 	
 	<!-- Session factory 配置 -->
